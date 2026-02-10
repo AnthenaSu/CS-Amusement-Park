@@ -37,26 +37,26 @@ The simulator is controlled via single-character commands entered at runtime.
 
 ## **Highlighted Functions**
 ### Command Processing & Control Flow
-- command_loop() / second_command_loop()
-- execute_schedule()
+- `command_loop()` / `second_command_loop()`
+- `execute_schedule()`
 ### Core Data Model
-- initialise_park()
-- create_ride() / create_visitor()
+- `initialise_park()`
+- `create_ride()` / `create_visitor()`
 ### Linked List Operations
-- Ride management: add_ride(), insert_ride(), delete_shutdown_ride()
-- Visitor management: add_visitor(), leave()
+- Ride management: `add_ride()`, `insert_ride()`, `delete_shutdown_ride()`
+- Visitor management: `add_visitor()`, `leave()`
 ### Queue & Visitor State Management
-- join_queues() / delete_from_queue()
-- move_visitor() / find_park()
+- `join_queues()` / `delete_from_queue()`
+- `move_visitor()` / `find_park()`
 ### Validation & Constraints
-- check_ride_validity() / check_visitor_validity()
-- check_queues() / check_move() / check_full()
+- `check_ride_validity()` / `check_visitor_validity()`
+- `check_queues()` / `check_move()` / `check_full()`
 ### Ride Operations
-- operate_ride()
-- merge() / split()
-- shut_down_ride() / move_same_type()
+- `operate_ride()`
+- `merge()` / `split()`
+- `shut_down_ride()` / `move_same_type()`
 ### Scheduling System
-- do_schedule() / store_values()
-- execute_schedule()
+- `do_schedule()` / `store_values()`
+- `execute_schedule()`
 ### Memory Management
-- end_of_day() / free_park()
+- `end_of_day()` / `free_park()`
