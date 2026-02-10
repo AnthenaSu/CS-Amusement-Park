@@ -15,26 +15,25 @@ The park maintains:
 - Operating rides boards up to the ride’s rider capacity, returning visitors to roaming
 
 ## Command Reference
-| Command | Arguments | Action | Function(s) |
-|-------|-----------|--------|-------------|
-| `?` | — | Show usage information | `print_usage()` |
-| `a r` | `ride_name ride_type` | Add a ride | `add_ride()` |
-| `a v` | `visitor_name height` | Add a visitor | `add_visitor()` |
-| `i` | `index ride_name ride_type` | Insert ride at position | `insert_ride()` |
-| `p` | — | Print park state | `print_park()` |
-| `j` | `ride_name visitor_name` | Join ride queue | `join_queues()` |
-| `m` | `visitor_name ride_name` | Move visitor | `move_visitor()` |
-| `d` | `visitor_name` | Remove from queue | `delete_from_queue()` |
-| `l` | `visitor_name` | Visitor leaves park | `leave()` |
-| `t` | — | Show visitor counts | `print_total_vis()` |
-| `c` | `start end direction` | Count queued visitors | `count()` |
-| `r` | — | Operate all rides | `operate_ride()` |
-| `S` | `ride_name` | Shut down ride | `shut_down_ride()` |
-| `M` | `ride_type` | Merge two smallest rides | `merge()` |
-| `s` | `n ride_name` | Split a ride | `split()` |
-| `T` | `ticks command` | Schedule a command | `do_schedule()` |
-| `~` | `ticks` | Advance scheduled time | `forward_ticks()` |
-| `q` | — | Exit and free memory | `end_of_day()` |
+The simulator is controlled via single-character commands entered at runtime.
+
+| Command | Arguments | Description |
+|-------|-----------|-------------|
+| `a r` | `ride_name ride_type` | Add a new ride to the park |
+| `a v` | `visitor_name visitor_height` | Add a new visitor to the park |
+| `i` | `index ride_name ride_type` | Insert a ride at a specific position |
+| `j` | `ride_name visitor_name` | Add a visitor to a ride queue |
+| `m` | `visitor_name ride_name` | Move a roaming visitor to a ride queue |
+| `d` | `visitor_name` | Remove a visitor from a ride queue back to roaming |
+| `p` | — | Print the current park state |
+| `t` | — | Display total, roaming, and queued visitors |
+| `c` | `start_ride end_ride` | Count visitors queued between two rides |
+| `l` | `visitor_name` | Remove a visitor from the park |
+| `r` | — | Operate all rides and return riders to roaming |
+| `M` | `ride_type` | Merge the two smallest rides of a given type |
+| `s` | `n ride_name` | Split a ride into `n` smaller rides |
+| `q` | — | Quit the program and free all resources |
+| `?` | — | Show usage information |
 
 ## **Highlighted Functions**
 ### Command Processing & Control Flow
